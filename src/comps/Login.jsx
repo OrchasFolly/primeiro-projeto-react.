@@ -1,17 +1,38 @@
+import './Login-Register.css'
 import logo from '../assets/logo.svg';
 // import logo from '../assets/asas.svg';
 
 function Login(props) {
+
   const anonimo = function (event){
-    let form = document.getElementById("needs-validation-login");
+    const form = document.getElementById("needs-validation-login")
     if (!form.checkValidity()){
       event.preventDefault();
       event.stopPropagation();
-      form.classList.add('was-validated');
+      form.classList.add('was-validated')
+      message()
     }
     else{
-      form.classList.add('was-validated');
+      form.classList.add('was-validated')
+      enviado()
     }
+  
+    function message() {
+      setTimeout(() => {
+        form.classList.remove('was-validated')
+      }, 3000)
+    }
+  }
+
+  const enviado = function (){
+    let register = document.getElementById("register")
+    let login = document.getElementById("login")
+    let nav = document.getElementById("nav")
+    let AppHeader = document.getElementById("head")
+    register.style.display="none"
+    login.style.display="none"
+    nav.style.display="flex"
+    AppHeader.style.justifyContent="start"
   }
 
   const trocar = function (){
@@ -27,18 +48,18 @@ function Login(props) {
         <img src={logo} className="App-logo" alt="logo"/>
       </div>
       {/* usar express ou qualquer outro framework semelhante para validação de login com rotas */}
-      <form method="POST" action="#" id="needs-validation-login" className="App-header" noValidate>
+      <form id="needs-validation-login" className="App-header" noValidate>
         <h1 className="title">Login no sistema</h1>
         <textbox>
 
           <label className="col-form">
-            Login
-            <input type="text" size={30} value={props.value1} required></input>
+            Nome ou email
+            <input type="text" size={30} value={props.value1} name="nameLogin" required></input>
             <div class="valid-feedback">
               OK!
             </div>
             <div class="invalid-feedback">
-              Nome incorreto ou não existe.
+              Nome ou email incorreto ou não existe.
             </div>
           </label>
 
@@ -47,7 +68,7 @@ function Login(props) {
 
           <label className="col-form">
             Senha
-            <input type="password" size={30} value={props.value2} required></input>
+            <input type="password" size={30} value={props.value2} name="passLogin" required></input>
             <div class="valid-feedback">
               OK!
             </div>

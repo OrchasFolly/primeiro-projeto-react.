@@ -1,18 +1,19 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-import './comps/login-register.css'
-import Login from './comps/Login.jsx'
-import Register from './comps/Register.jsx'
+import './App.css';
+import Login from './comps/Login.jsx';
+import Register from './comps/Register.jsx';
+import Nav from './comps/Nav.jsx'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header id="head" className="App-header">
+        <Nav/>
         <div className="colum">
-          <Login/>
-          <Register/>
+          {/* <Login/>
+          <Register/> */}
         </div>
       </header>
     </div>

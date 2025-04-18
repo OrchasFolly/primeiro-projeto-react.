@@ -1,0 +1,6 @@
+th {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(43, 90, 133);
+    width: 400px;
+}
