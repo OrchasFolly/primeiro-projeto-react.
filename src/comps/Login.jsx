@@ -80,7 +80,8 @@ function Login(props) {
         </textbox>
         <div className="col-btn"> 
           <button type="button" onClick={trocar}>Registrar?</button>
-          <button type="submit" onClick={anonimo}>Enviar</button>
+          <button type="button" onClick={anonimo}>Enviar</button>
+          {/* Usar Onsubmit para validações! */}
         </div>
       </form>
     </login>

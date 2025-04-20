@@ -44,7 +44,7 @@ function Personal(props) {
         <img src={logo} className="App-logo" alt="asas" width={296.5}/>
       </div>
       {/* usar express ou qualquer outro framework semelhante para validação de login com rotas */}
-      <form method="#" action="#" id="needs-validation-register" className="App-header" noValidate>
+      <form id="needs-validation-register" className="App-header" noValidate>
         <h1 className="title">Registro no sistema</h1>
         <textbox>
 
@@ -104,7 +104,8 @@ function Personal(props) {
         </textbox>
         <div className="col-btn"> 
           <button type="button" onClick={trocar}>Login?</button>
-          <button type="submit" onClick={anonimo}>Enviar</button>
+          <button type="button" onClick={anonimo}>Enviar</button>
+          {/* Usar Onsubmit para validações! */}
         </div>
       </form>
     </register>

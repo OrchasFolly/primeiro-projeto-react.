@@ -1,0 +1,44 @@
+
+
+.navigator {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 75vw;
+    height: 85vh;
+}
+
+@media(width < 480px){
+    .navigator {
+        width: 100vw;
+    }
+} 
+
+.titleEmployee {
+    background-color: #61dafb71;
+}
+
+.cardsPersonal {
+    display: flex;
+}
+
+.align {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Funções da tabela */
+.table {
+    position: sticky;
+    width: (400px, 800px);
+}
+
+.table tr {
+    scroll-snap-align: start;
+}
+
+.tabScroll {
+   overflow-x: auto;
+   scroll-snap-type: y mandatory;
+}
