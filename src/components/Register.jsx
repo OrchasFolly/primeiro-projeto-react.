@@ -1,47 +1,51 @@
-import './Login-Register.css'
-import logo from '../assets/asas.svg'
+import './Register.css';
+import logo from '../assets/asas.svg';
 // import logo from '../assets/logo.svg';
 
 function Personal(props) {
 
   const anonimo = function (event){
-    const form = document.getElementById("needs-validation-register")
+    const form = document.getElementById("needs-validation-register");
     if (!form.checkValidity()){
       event.preventDefault();
       event.stopPropagation();
-      form.classList.add('was-validated')
-      message()
+      form.classList.add('was-validated');
+      message();
     }
     else{
-      form.classList.add('was-validated')
-      enviado()
+      form.classList.add('was-validated');
+      enviado();
     }
   
     function message() {
       setTimeout(() => {
-        form.classList.remove('was-validated')
-      }, 3500)
+        form.classList.remove('was-validated');
+      }, 3500);
     }
   }
 
   const enviado = function (){
-    let register = document.getElementById("register")
-    let login = document.getElementById("login")
-    register.style.display="none"
-    login.style.display="none"
+    const register = document.getElementById("register");
+    const login = document.getElementById("login");
+    const nav = document.getElementById("nav");
+    const AppHeader = document.getElementById("head");
+    register.style.display="none";
+    login.style.display="none";
+    nav.style.display="flex";
+    AppHeader.style.justifyContent="start";
   }
 
   const trocar = function (){
-    let register = document.getElementById("register")
-    let login = document.getElementById("login")
-    register.style.display="none"
-    login.style.display="block"
+    const register = document.getElementById("register");
+    const login = document.getElementById("login");
+    register.style.display="none";
+    login.style.display="block";
   }
 
   return (
     <register id="register" className="App">
       <div className='logo-box'>
-        <img src={logo} className="App-logo" alt="asas" width={296.5}/>
+        <img src={logo} className="App-asas" alt="asas" width={296.5}/>
       </div>
       {/* usar express ou qualquer outro framework semelhante para validação de login com rotas */}
       <form id="needs-validation-register" className="App-header" noValidate>

@@ -4,8 +4,8 @@ import Card from './Card.jsx';
 
 function Personnel(props) {
   if(props.person){
-    const dados = props.person
-    let card = []
+    const dados = props.person;
+    let card = [];
     for(let i = 0; i < dados.length; i++){
       card.push(<Card 
                   name={dados[i].name} 
@@ -13,7 +13,7 @@ function Personnel(props) {
                   email={dados[i].email}
                   cod={dados[i].cod} 
                   desc={dados[i].desc}
-                />)
+                />);
     }
     return (
       <personnel id="nav" className="navigator">

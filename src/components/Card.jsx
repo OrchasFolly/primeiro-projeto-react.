@@ -1,5 +1,5 @@
 import './Card.css';
-import logo from '../assets/unknown-person.svg'
+import logo from '../assets/unknown-person.svg';
 
 function Card(props) {
   return (

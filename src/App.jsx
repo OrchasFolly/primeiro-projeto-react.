@@ -1,10 +1,10 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+// import { useState } from 'react';
+// import reactLogo from './assets/react.svg';
+// import viteLogo from '/vite.svg';
 import './App.css';
-import Login from './comps/Login.jsx';
-import Register from './comps/Register.jsx';
-import Personnel from './comps/Personnel.jsx'
+import Login from './components/Login.jsx';
+import Register from './components/Register.jsx';
+import Personnel from './components/Personnel.jsx';
 
 function App() {
   let lista = {
@@ -29,6 +29,13 @@ function App() {
         "email": "nomail@email.com",
         "cod": 16822,
         "desc": "Descrição3"
+      },
+      {
+        "name": "Dr.Benjamin H",
+        "date": "01/22/1968",
+        "email": "nomail@email.com",
+        "cod": 12745,
+        "desc": "Descrição4"
       },
       {
         "name": "Dr.Benjamin H",

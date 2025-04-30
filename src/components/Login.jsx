@@ -1,45 +1,45 @@
-import './Login-Register.css'
+import './Login.css';
 import logo from '../assets/logo.svg';
 // import logo from '../assets/asas.svg';
 
 function Login(props) {
 
   const anonimo = function (event){
-    const form = document.getElementById("needs-validation-login")
+    const form = document.getElementById("needs-validation-login");
     if (!form.checkValidity()){
       event.preventDefault();
       event.stopPropagation();
-      form.classList.add('was-validated')
-      message()
+      form.classList.add('was-validated');
+      message();
     }
     else{
-      form.classList.add('was-validated')
-      enviado()
+      form.classList.add('was-validated');
+      enviado();
     }
   
     function message() {
       setTimeout(() => {
-        form.classList.remove('was-validated')
-      }, 3000)
+        form.classList.remove('was-validated');
+      }, 3000);
     }
   }
 
   const enviado = function (){
-    let register = document.getElementById("register")
-    let login = document.getElementById("login")
-    let nav = document.getElementById("nav")
-    let AppHeader = document.getElementById("head")
-    register.style.display="none"
-    login.style.display="none"
-    nav.style.display="flex"
-    AppHeader.style.justifyContent="start"
+    const register = document.getElementById("register");
+    const login = document.getElementById("login");
+    const nav = document.getElementById("nav");
+    const AppHeader = document.getElementById("head");
+    register.style.display="none";
+    login.style.display="none";
+    nav.style.display="flex";
+    AppHeader.style.justifyContent="start";
   }
 
   const trocar = function (){
-    let register = document.getElementById("register")
-    let login = document.getElementById("login")
-    register.style.display="block"
-    login.style.display="none"
+    const register = document.getElementById("register");
+    const login = document.getElementById("login");
+    register.style.display="block";
+    login.style.display="none";
   }
 
   return (
