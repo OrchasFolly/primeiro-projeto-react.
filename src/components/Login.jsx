@@ -1,10 +1,12 @@
 import './Login.css';
 import logo from '../assets/logo.svg';
-// import logo from '../assets/asas.svg';
 
 function Login(props) {
+  const handleChange = function(){
+    props.changePage(!props.change)
+  }
 
-  const anonimo = function (event){
+  const handleValidation = function (event){
     const form = document.getElementById("needs-validation-login");
     if (!form.checkValidity()){
       event.preventDefault();
@@ -14,36 +16,30 @@ function Login(props) {
     }
     else{
       form.classList.add('was-validated');
-      enviado();
+      submit();
     }
   
-    function message() {
+    function message(){
       setTimeout(() => {
         form.classList.remove('was-validated');
       }, 3000);
     }
   }
 
-  const enviado = function (){
+  const submit = function (){
     const register = document.getElementById("register");
     const login = document.getElementById("login");
-    const nav = document.getElementById("nav");
+    const personnel = document.getElementById("personnel");
     const AppHeader = document.getElementById("head");
     register.style.display="none";
     login.style.display="none";
-    nav.style.display="flex";
+    personnel.style.display="flex";
+    AppHeader.style.display="block";
     AppHeader.style.justifyContent="start";
   }
 
-  const trocar = function (){
-    const register = document.getElementById("register");
-    const login = document.getElementById("login");
-    register.style.display="block";
-    login.style.display="none";
-  }
-
   return (
-    <login id="login" className="App">
+    <login id="login" style={{display: props.change ? "block" : "none"}}>
       <div className='logo-box'>
         <img src={logo} className="App-logo" alt="logo"/>
       </div>
@@ -59,7 +55,7 @@ function Login(props) {
               OK!
             </div>
             <div class="invalid-feedback">
-              Nome ou email incorreto ou não existe.
+              Nome ou email incorreto.
             </div>
           </label>
 
@@ -73,14 +69,14 @@ function Login(props) {
               OK!
             </div>
             <div class="invalid-feedback">
-              Senha incorreta ou não existe.
+              Senha incorreta.
             </div>
           </label>
 
         </textbox>
         <div className="col-btn"> 
-          <button type="button" onClick={trocar}>Registrar?</button>
-          <button type="button" onClick={anonimo}>Enviar</button>
+          <button type="button" onClick={handleChange}>Registrar?</button>
+          <button type="button" onClick={handleValidation}>Enviar</button>
           {/* Usar Onsubmit para validações! */}
         </div>
       </form>

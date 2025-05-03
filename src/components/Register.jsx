@@ -2,9 +2,12 @@ import './Register.css';
 import logo from '../assets/asas.svg';
 // import logo from '../assets/logo.svg';
 
-function Personal(props) {
+function Personal(props){
+  const handleChange = function(){
+    props.changePage(!props.change)
+  }
 
-  const anonimo = function (event){
+  const handleValidation = function (event){
     const form = document.getElementById("needs-validation-register");
     if (!form.checkValidity()){
       event.preventDefault();
@@ -14,36 +17,30 @@ function Personal(props) {
     }
     else{
       form.classList.add('was-validated');
-      enviado();
+      submit();
     }
   
-    function message() {
+    function message(){
       setTimeout(() => {
         form.classList.remove('was-validated');
       }, 3500);
     }
   }
 
-  const enviado = function (){
+  const submit = function (){
     const register = document.getElementById("register");
     const login = document.getElementById("login");
-    const nav = document.getElementById("nav");
+    const personnel = document.getElementById("personnel");
     const AppHeader = document.getElementById("head");
     register.style.display="none";
     login.style.display="none";
-    nav.style.display="flex";
+    personnel.style.display="flex";
+    AppHeader.style.display="block";
     AppHeader.style.justifyContent="start";
   }
 
-  const trocar = function (){
-    const register = document.getElementById("register");
-    const login = document.getElementById("login");
-    register.style.display="none";
-    login.style.display="block";
-  }
-
   return (
-    <register id="register" className="App">
+    <register id="register" style={{display: props.change ? "none" : "block"}}>
       <div className='logo-box'>
         <img src={logo} className="App-asas" alt="asas" width={296.5}/>
       </div>
@@ -107,8 +104,8 @@ function Personal(props) {
 
         </textbox>
         <div className="col-btn"> 
-          <button type="button" onClick={trocar}>Login?</button>
-          <button type="button" onClick={anonimo}>Enviar</button>
+          <button type="button" onClick={handleChange}>Login?</button>
+          <button type="button" onClick={handleValidation}>Enviar</button>
           {/* Usar Onsubmit para validações! */}
         </div>
       </form>

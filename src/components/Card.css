@@ -1,10 +1,10 @@
-Card {
+.cardBase {
     display: flex;
     justify-content: space-between;
     background-color: #fcfcfc42;
-    width: 72vw;
+    width: 98rem;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .personnelData {
@@ -18,40 +18,28 @@ Card {
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
 }
 
 .styleHeader{
-    font-weight: 700;
-    font-size: 24px;
-}
-.styleData {
     display: flex;
-    text-align: justify;
-    align-items: end;
-    padding-left: 5px;
-    font-size: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+.styleData {
+    padding-left: 10px;
     font-weight: normal;
+    text-align: justify;
 }
 
 @media(width < 480px){
-    Card {
-        width: 40rem;
+    .cardBase {
+        width: 49rem;
     }
     .personnelData {
         width: 70%;
     }
-    .styleHeader{
-        font-size: 20px;
-    }
-    .styleData {
-        font-size: 16px;
-    }
-} 
-
-th {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }

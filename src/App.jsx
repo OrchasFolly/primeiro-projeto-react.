@@ -1,14 +1,14 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
 import './App.css';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
-import Personnel from './components/Personnel.jsx';
+import Personnel from './containers/Personnel/Personnel.jsx';
+import Nav from './components/Nav.jsx';
+import React, { useState } from 'react';
 
 function App() {
-  let lista = {
-    "funcionarios": [
+  const [change, changePage] = useState(true);
+  const group = {
+    employees: [
       {
       "name": "Dr.Francis W",
       "date": "██/██/1981",
@@ -48,13 +48,14 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <header id="head" className="App-header">
-        <main className="colum">
-          <Login/>
-          <Register/>
+    <div className="App-header">
+      <Login change={change} changePage={changePage}/>
+      <Register change={change} changePage={changePage}/>
+      <header id="head" className="colum">
+        <Nav/>
+        <main>
           <article>
-            <Personnel person={lista.funcionarios}/>
+            <Personnel person={group}/>
           </article>
         </main>
       </header>

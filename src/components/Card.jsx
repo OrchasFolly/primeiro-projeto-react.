@@ -3,37 +3,37 @@ import logo from '../assets/unknown-person.svg';
 
 function Card(props) {
   return (
-    <card>
-      <div className="personnelData">
-        <th className="styleHeader">
+    <tr className="cardBase">
+      <th className="personnelData">
+        <div className="styleHeader">
           Nome:
-          <td className="styleData">{props.name}</td>
-        </th>
+          <p className="styleData">{props.name}</p>
+        </div>
 
-        <th className="styleHeader">
+        <div className="styleHeader">
           Data:
-          <td className="styleData">{props.date}</td>
-        </th>
+          <p className="styleData">{props.date}</p>
+        </div>
 
-        <th className="styleHeader">
+        <div className="styleHeader">
           Email:
-          <td className="styleData">{props.email}</td>
-        </th>
+          <p className="styleData">{props.email}</p>
+        </div>
 
-        <th className="styleHeader">
+        <div className="styleHeader">
           Código:
-          <td className="styleData">{props.cod}</td>
-        </th>
+          <p className="styleData">{props.cod}</p>
+        </div>
 
-        <th className="styleHeader">
+        <div className="styleHeader">
           Descrição:
-          <td className="styleData">{props.desc}</td>
-        </th>
-      </div>
-      <div className="personnelImg">
+          <p className="styleData">{props.desc}</p>
+        </div>
+      </th>
+      <th className="personnelImg">
         <img src={logo} width={75}></img>
-      </div>
-    </card>
+      </th>
+    </tr>
   );
 }
 
