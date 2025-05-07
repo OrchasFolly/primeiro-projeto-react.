@@ -1,9 +1,13 @@
 .navigator {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     width: 75vw;
     height: 85vh;
+}
+
+.styleFilter{
+    font-size: 16pt;
 }
 
 @media(width < 480px){
@@ -14,10 +18,7 @@
 
 .titleEmployee {
     background-color: #61dafb71;
-}
-
-.cardsPersonal {
-    display: flex;
+    font-size: 25pt;
 }
 
 .align {
@@ -37,6 +38,7 @@
 }
 
 .tabScroll {
+    display: flex;
     scrollbar-color: #282c34 #282c34;
     scrollbar-width: thin;
     overflow-x: auto;

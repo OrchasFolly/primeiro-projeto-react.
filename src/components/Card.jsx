@@ -1,37 +1,45 @@
 import './Card.css';
-import logo from '../assets/unknown-person.svg';
-
 function Card(props) {
   return (
     <tr className="cardBase">
       <th className="personnelData">
         <div className="styleHeader">
           Nome:
-          <p className="styleData">{props.name}</p>
+          <p className="styleData">{props.list.name}</p>
         </div>
 
         <div className="styleHeader">
-          Data:
-          <p className="styleData">{props.date}</p>
+          Nascimento:
+          <p className="styleData">{props.list.date}</p>
         </div>
 
         <div className="styleHeader">
           Email:
-          <p className="styleData">{props.email}</p>
+          <p className="styleData">{props.list.email}</p>
         </div>
 
         <div className="styleHeader">
           Código:
-          <p className="styleData">{props.cod}</p>
+          <p className="styleData">{props.list.cod}</p>
         </div>
 
         <div className="styleHeader">
-          Descrição:
-          <p className="styleData">{props.desc}</p>
+          <p className="styleStatus">{props.list.status}</p>
         </div>
       </th>
       <th className="personnelImg">
-        <img src={logo} width={75}></img>
+        <img width={75}></img>
+      </th>
+      <th className="backDescription">
+        <table className="tabScrollDesc">
+          <tbody>
+            <tr>
+              <td>
+                <p>{props.list.desc}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </th>
     </tr>
   );

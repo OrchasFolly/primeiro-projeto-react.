@@ -13,13 +13,5 @@
   text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-#head {
-  display: none;
-}
-
-.colum {
-  display: flex;
-  flex-direction: row;
+  transition: 2.5s;
 }

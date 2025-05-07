@@ -1,9 +1,6 @@
-register {
-    display: none;
-}
 
 .App-asas {
-    height: 40vmin; /* height: 40vmin; segunda opção / width: 40vmin; primeira opção */
+    height: 35vmin; /* height: 40vmin; segunda opção / width: 40vmin; primeira opção */
     pointer-events:all;
     will-change: filter;
     transition: filter 3s;
