@@ -30,11 +30,11 @@ function Login() {
   return (
     <div id="login">
       <div className='logo-box'>
-        <img src={logo} className="App-logo" alt="logo"/>
+        <img src={logo} className="App-logo App-logo-login" alt="logo"/>
       </div>
       
       {/* usar express ou qualquer outro framework semelhante para validação de login com rotas */}
-      <form id="needs-validation-login" className="App-header" noValidate>
+      <form id="needs-validation-login" className="App-header App-header-login" noValidate>
         <h1 className="title">Login no sistema</h1>
 
         <textbox>

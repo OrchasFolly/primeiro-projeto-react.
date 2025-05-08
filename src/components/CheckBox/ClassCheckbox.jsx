@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import './Checkbox.css'
 
 export default class ClassCheckbox extends Component{
     constructor(props){

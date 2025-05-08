@@ -1,27 +1,14 @@
-
-.App-asas {
-    height: 35vmin; /* height: 40vmin; segunda opção / width: 40vmin; primeira opção */
-    pointer-events:all;
-    will-change: filter;
-    transition: filter 3s;
+.App-header-register {
+    min-height: 60vh;
 }
 
-.App-asas:hover {
+.App-logo-register:hover {
     filter: drop-shadow(0px 0px 10px gray);
     transition: 3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-asas {
-        animation: App-asas-spin infinite 30s linear;
-    }
-}
-
-@keyframes App-asas-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.checkBox {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }

@@ -32,11 +32,11 @@ function Personal(){
   return (
     <div id="register">
       <div className='logo-box'>
-        <img src={logo} className="App-asas" alt="asas" width={296.5}/>
+        <img src={logo} className="App-logo App-logo-register" alt="asas" width={296.5}/>
       </div>
 
       {/* usar express ou qualquer outro framework semelhante para validação de login com rotas */}
-      <form id="needs-validation-register" className="App-header" noValidate>
+      <form id="needs-validation-register" className="App-header App-header-register" noValidate>
         <h1 className="title">Registro no sistema</h1>
 
         <textbox>
@@ -87,7 +87,7 @@ function Personal(){
             </div>
           </label>
         </textbox>
-        <textbox>
+        <textbox className="checkBox">
           <FunctCheckbox title={"Evento por função"}/>
           <ClassCheckbox title={"Evento por classe"}/>
         </textbox>

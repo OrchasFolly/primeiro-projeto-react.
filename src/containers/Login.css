@@ -1,64 +1,8 @@
-.App-header {
+.App-header-login {
     min-height: 60vh;
 }
 
-.col-form {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 5px;
-}
-
-label {
-    font-size: large;
-}
-
-button, input {
-    padding: 5px;
-    margin-top: 4px;
-    border-radius: 0.5rem;
-    border: none;
-}
-
-@media (height >= 1000px){
-    button, input {
-        font-size: 20px;
-    }
-    .title {
-        font-size: 60px;
-    }
-}
-
-.logo-box {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.App-logo {
-    height: 35vmin; /* height: 40vmin; segunda opção / width: 40vmin; primeira opção */
-    pointer-events:all;
-    will-change: filter;
-    transition: filter 3s;
-}
-
-.App-logo:hover {
+.App-logo-login:hover {
     filter: drop-shadow(0px 0px 10px white);
     transition: 3s;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 30s linear;
-    }
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }

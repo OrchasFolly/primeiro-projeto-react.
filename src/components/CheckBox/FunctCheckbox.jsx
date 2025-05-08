@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Checkbox.css'
 
 function FunctCheckbox({title, checkEvent = () => {}}){
     const [check, checkBox] = useState(true);
