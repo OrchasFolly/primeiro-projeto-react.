@@ -17,10 +17,21 @@ function Personnel(props) {
   return (
     <div id="personnel" className="navigator">
       <h1 className="titleEmployee">Funcionários</h1>
-      <label style={{color: load ? "#ca6d6d" : "white"}}>
-          <input type="checkbox" checked={!load} onChange={handleCheck}/>
-          {checkboxStatus}
-      </label>
+      <div className="filterSpace">
+        <div className="alignFilters">
+          <label style={{color: load ? "#ca6d6d" : "white"}}>
+              <input type="checkbox" checked={!load} onChange={handleCheck}/>
+              {checkboxStatus}
+          </label>
+        </div>
+        <div className="alignFilters">
+          <label>L1</label>
+          <label>L2</label>
+          <label>L3</label>
+          <label>L4</label>
+          <label>L5</label>
+        </div>
+      </div>
       <table className="tabScroll">
         <tbody>
           {loadCheck}

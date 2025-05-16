@@ -14,11 +14,23 @@
     .navigator {
         width: 100vw;
     }
-} 
+}
 
 .titleEmployee {
     background-color: #61dafb71;
     font-size: 25pt;
+}
+
+.filterSpace {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alignFilters {
+    display: flex;
+    width: 10rem;
+    margin: 5px;
+    justify-content: space-between;
 }
 
 .align {
